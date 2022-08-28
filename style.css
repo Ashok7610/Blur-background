@@ -1,0 +1,101 @@
+body{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1649239307159-40b261b608a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=818&q=80");
+    background-size:cover ;
+    background-position: center;
+    text-align: center;
+}
+
+.container h1{
+font-size: 60px;
+color:#fff;
+letter-spacing: 4px;
+text-shadow: 2px 2px rgba(0,0,0,0.3);
+}
+.btn{
+    padding:10px 20px;
+    background-color: orangered;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.btn:hover{
+    filter: brightness(0.8);
+}
+.active.container{
+    filter: blur(5px) brightness(0.7);
+}
+.popup-container{
+    position: fixed;
+    left: 50%;
+    background-color: white;
+    transform: translateX(-200px);
+    width: 400px;
+    height: 200px;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 20px;
+    background: url("https://images.unsplash.com/photo-1585758874546-c593da5f29e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: all 0.5s;
+}
+.popup-container.active{
+    visibility: hidden;
+    /* opacity: 1; */
+    top: 10%;
+}
+.popup-container h4{
+    font-size: 25px;
+    color: blueviolet;
+    margin-top: -5px;
+}
+.popup-container label{
+    font-size: 22px;
+    font-weight: 550;
+    margin-top: -15px;
+    margin-bottom:5px;
+    color: blueviolet;
+}
+input{
+    margin-bottom: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    height: 24px;
+    font-size: 20px;
+    text-align: center;
+}
+.popup-btn{
+    align-items: center;
+    background-color: orangered;
+    border: 2px solid;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+}
+input::placehoder{
+    color:lightgray;
+}
+.close-icon{
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close-icon:hover{
+    color:orangered;
+}
